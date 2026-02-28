@@ -1,71 +1,57 @@
-<p align="center">
+<img width="1751" height="604" alt="image" src="https://github.com/user-attachments/assets/a3adb600-0c78-410a-96bf-fd5635ba790c" /><p align="center">
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# [BreatheSafe] 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: [Kalyani]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: [Kalyani B] - [Mar Athanasius College of Engineering, Kothamangalam]
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+[Low-cost indoor air quality monitoring system using PPD42 Dust sensor(SHINYEI) and ESP32S which detects the PM2.5 levels real time, displays air quality trends, and automatically alerts families via Whatsapp when air becomes hazardous.]
 
 ### The Problem statement
-[What problem are you solving?]
+[Air condition can be considered as a silent pandemic of our generation. India records over 1.7 million pr3emature deaths annuallydue to air pollution. Yet the convos are limited to outdoor pollution and government monitoring stations. But, the air inside our homes, schools and workspaces can be far more toxic than the air outside and nobody knows it's significance. Studies reveal that indoor PM2.5 levels during cooking can go upto 13 times higher than outdoor levels , with a single frying session inscreasing particle concentrations to over 500 µg/m³, against the WHO safe limit of just 15 µg/m³. Over 100 million Indian households using gas stoves and solid fuels are unknowingly exposing themselves to this invisible danger twice a day, every day. 
+The most vulnerable categories are the children, pregnant women and elderly people. 
+India has only 308 government air quality monitoring stations across 115 cities — measuring city-wide averages that tells nothing about the air in one's home. Existing personal air quality monitors cost ₹5,000–₹50,000, require smartphones, and are designed for Western markets — completely out of reach for the average Indian family.
+There is currently no affordable, real-time, hyperlocal solution for monitoring the air that Indian families actually breathe.]
 
 ### The Solution
-[How are you solving it?]
+[BreatheSafe is a low-cost, real-time indoor air quality monitoring system built for homes using Shinyei PPD42 particulate matter sensor and an ESP32S microcontroller. The system continuously measures PM2.5 particle concentration every 30 seconds and transmits the data wirelessly to a live web dashboard hosted locally on a laptop via Flask ( This display on laptop is just for the prototying, instead it can be built as an app to see the logs and other details). The dashboard displays real-time PM2.5 levels, air quality status from Good to Hazardous,  WHO safe limit comparison, live trend analysis showing whether air quality is rising or falling, and a predictive forecast estimating how long before air quality reaches a dangerous threshold. When PM2.5 levels cross 55 µg/m³, an LED alert triggers automatically and the relay module activates — designed to control an exhaust fan or ventilation system in real deployment. When levels cross 150 µg/m³, an automated WhatsApp notification is instantly sent to the family member's phone via Twilio, even without internet on the sensor node. Every reading is timestamped and logged to a CSV file for long-term health record keeping. Unlike government monitoring stations that measure city-wide averages, BreatheSafe monitors the exact air a family breathes ie. in their kitchen, bedroom, or classroom at a hardware cost under ₹800.]
 
 ---
 
-## Technical Details
+
 
 ### Technologies/Components Used
 
-**For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
 
 **For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+- Main components:[ESP32S, Dust Sensor PPD42]
+- Tools required: [Arduino IDE, ESP 32 Board Package, Flask, Json library]
 
 ---
 
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [1. Real-Time Air Quality Monitoring
+Continuously measures indoor PM2.5 particle concentration every 30 seconds using the Shinyei PPD42NS sensor and displays live data on a web dashboard accessible from any device on the local network.]
+- Feature 2: [Predictive Air Quality Forecasting: Analyzes the rate of change across recent readings to predict where air quality is heading — alerting families before air becomes dangerous rather than after, with estimated time to the next danger threshold.]
+- Feature 3: [3. Automated Family Alert via WhatsApp
+Instantly sends a WhatsApp notification to the family member's phone when PM2.5 crosses hazardous levels — no manual checking required, no app needed, works on any basic smartphone.]
+
 
 ---
 
 ## Implementation
-
-### For Software:
-
-#### Installation
-```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
-```
-
-#### Run
-```bash
-[Run commands - e.g., npm start, python app.py]
-```
 
 ### For Hardware:
 
@@ -83,42 +69,21 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![![<img width="1869" height="838" alt="Screenshot 2026-02-28 094500" src="https://github.com/user-attachments/assets/ee44a8ba-5601-4dc9-a0e0-71335348783f" />
+]()
+]
+*This is the website hosted*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![<img width="1751" height="604" alt="Screenshot 2026-02-28 094511" src="https://github.com/user-attachments/assets/d9e19ac1-aa91-47d2-af3a-c6109295b13a" />
+]
+*Shows the trends of air quality monitored*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-#### Diagrams
-
-**System Architecture:**
-
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
-
-**Application Workflow:**
-
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
-
----
 
 ### For Hardware:
 
-#### Schematic & Circuit
-
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
 
 #### Build Photos
 
-![Team](Add photo of your team here)
 
 ![Components](Add photo of your components here)
 *List out all components shown*
@@ -131,289 +96,31 @@ List the key features of your project:
 
 ---
 
-## Additional Documentation
-
-### For Web Projects with Backend:
-
-#### API Documentation
-
-**Base URL:** `https://api.yourproject.com`
-
-##### Endpoints
-
-**GET /api/endpoint**
-- **Description:** [What it does]
-- **Parameters:**
-  - `param1` (string): [Description]
-  - `param2` (integer): [Description]
-- **Response:**
-```json
-{
-  "status": "success",
-  "data": {}
-}
-```
-
-**POST /api/endpoint**
-- **Description:** [What it does]
-- **Request Body:**
-```json
-{
-  "field1": "value1",
-  "field2": "value2"
-}
-```
-- **Response:**
-```json
-{
-  "status": "success",
-  "message": "Operation completed"
-}
-```
-
-[Add more endpoints as needed...]
-
----
-
-### For Mobile Apps:
-
-#### App Flow Diagram
-
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
-
-#### Installation Guide
-
-**For Android (APK):**
-1. Download the APK from [Release Link]
-2. Enable "Install from Unknown Sources" in your device settings:
-   - Go to Settings > Security
-   - Enable "Unknown Sources"
-3. Open the downloaded APK file
-4. Follow the installation prompts
-5. Open the app and enjoy!
-
-**For iOS (IPA) - TestFlight:**
-1. Download TestFlight from the App Store
-2. Open this TestFlight link: [Your TestFlight Link]
-3. Click "Install" or "Accept"
-4. Wait for the app to install
-5. Open the app from your home screen
-
-**Building from Source:**
-```bash
-# For Android
-flutter build apk
-# or
-./gradlew assembleDebug
-
-# For iOS
-flutter build ios
-# or
-xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
-```
-
----
 
 ### For Hardware Projects:
 
-#### Bill of Materials (BOM)
 
-| Component | Quantity | Specifications | Price | Link/Source |
-|-----------|----------|----------------|-------|-------------|
-| Arduino Uno | 1 | ATmega328P, 16MHz | ₹450 | [Link] |
-| LED | 5 | Red, 5mm, 20mA | ₹5 each | [Link] |
-| Resistor | 5 | 220Ω, 1/4W | ₹1 each | [Link] |
-| Breadboard | 1 | 830 points | ₹100 | [Link] |
-| Jumper Wires | 20 | Male-to-Male | ₹50 | [Link] |
-| [Add more...] | | | | |
+**Total Estimated Cost:** ₹[800]
 
-**Total Estimated Cost:** ₹[Amount]
 
-#### Assembly Instructions
-
-**Step 1: Prepare Components**
-1. Gather all components listed in the BOM
-2. Check component specifications
-3. Prepare your workspace
-![Step 1](images/assembly-step1.jpg)
-*Caption: All components laid out*
-
-**Step 2: Build the Power Supply**
-1. Connect the power rails on the breadboard
-2. Connect Arduino 5V to breadboard positive rail
-3. Connect Arduino GND to breadboard negative rail
-![Step 2](images/assembly-step2.jpg)
-*Caption: Power connections completed*
-
-**Step 3: Add Components**
-1. Place LEDs on breadboard
-2. Connect resistors in series with LEDs
-3. Connect LED cathodes to GND
-4. Connect LED anodes to Arduino digital pins (2-6)
-![Step 3](images/assembly-step3.jpg)
-*Caption: LED circuit assembled*
-
-**Step 4: [Continue for all steps...]**
-
-**Final Assembly:**
-![Final Build](images/final-build.jpg)
-*Caption: Completed project ready for testing*
-
----
-
-### For Scripts/CLI Tools:
-
-#### Command Reference
-
-**Basic Usage:**
-```bash
-python script.py [options] [arguments]
-```
-
-**Available Commands:**
-- `command1 [args]` - Description of what command1 does
-- `command2 [args]` - Description of what command2 does
-- `command3 [args]` - Description of what command3 does
-
-**Options:**
-- `-h, --help` - Show help message and exit
-- `-v, --verbose` - Enable verbose output
-- `-o, --output FILE` - Specify output file path
-- `-c, --config FILE` - Specify configuration file
-- `--version` - Show version information
-
-**Examples:**
-
-```bash
-# Example 1: Basic usage
-python script.py input.txt
-
-# Example 2: With verbose output
-python script.py -v input.txt
-
-# Example 3: Specify output file
-python script.py -o output.txt input.txt
-
-# Example 4: Using configuration
-python script.py -c config.json --verbose input.txt
-```
 
 #### Demo Output
 
-**Example 1: Basic Processing**
-
-**Input:**
-```
-This is a sample input file
-with multiple lines of text
-for demonstration purposes
-```
-
-**Command:**
-```bash
-python script.py sample.txt
-```
-
-**Output:**
-```
-Processing: sample.txt
-Lines processed: 3
-Characters counted: 86
-Status: Success
-Output saved to: output.txt
-```
-
-**Example 2: Advanced Usage**
-
-**Input:**
-```json
-{
-  "name": "test",
-  "value": 123
-}
-```
-
-**Command:**
-```bash
-python script.py -v --format json data.json
-```
-
-**Output:**
-```
-[VERBOSE] Loading configuration...
-[VERBOSE] Parsing JSON input...
-[VERBOSE] Processing data...
-{
-  "status": "success",
-  "processed": true,
-  "result": {
-    "name": "test",
-    "value": 123,
-    "timestamp": "2024-02-07T10:30:00"
-  }
-}
-[VERBOSE] Operation completed in 0.23s
-```
-
----
 
 ## Project Demo
 
 ### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
+[]
 
 *Explain what the video demonstrates - key features, user flow, technical highlights*
 
-### Additional Demos
-[Add any extra demo materials/links - Live site, APK download, online demo, etc.]
 
----
-
-## AI Tools Used (Optional - For Transparency Bonus)
-
-If you used AI tools during development, document them here for transparency:
-
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
-
-**Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
-
-**Key Prompts Used:**
-- "Create a REST API endpoint for user authentication"
-- "Debug this async function that's causing race conditions"
-- "Optimize this database query for better performance"
-
-**Percentage of AI-generated code:** [Approximately X%]
-
-**Human Contributions:**
-- Architecture design and planning
-- Custom business logic implementation
-- Integration and testing
-- UI/UX design decisions
-
-*Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
-
----
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+- [Kalyani B]: [Full hardware and software]
 
 ---
-
-## License
-
-This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LICENSE) file for details.
-
-**Common License Options:**
-- MIT License (Permissive, widely used)
-- Apache 2.0 (Permissive with patent grant)
-- GPL v3 (Copyleft, requires derivative works to be open source)
 
 ---
 
